@@ -1,0 +1,53 @@
+.sidebar {
+    width: 50px;                  /* Largura inicial da sidebar */
+    height: 100vh;                /* Altura completa da tela */
+    background-color: #333;       /* Cor de fundo */
+    color: white;
+    overflow: hidden;             /* Esconde o conteúdo que ultrapassa a largura */
+    transition: width 0.3s ease;  /* Transição suave */
+    position: fixed;              /* Sidebar fixa */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+   transition: 0.5s ease-in-out;
+    padding-top: 20px;
+}
+li span{
+    padding-right: 16px;
+}
+.sidebar li {
+    width: 100px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+.sidebar-item  {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px;
+  }
+/* Expande a sidebar ao passar o mouse */
+.sidebar:hover {
+    width: 300px; /* Largura expandida da sidebar */
+}
+/* Estiliza os itens da lista */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+li span{
+    font-size: 28px;
+}
+
+.sidebar li {
+    padding: 15px 10px;
+    text-align: start;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+.sidebar li:hover{
+    background-color: rgb(36, 36, 36);
+}
