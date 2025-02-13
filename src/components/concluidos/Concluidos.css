@@ -5,3 +5,8 @@
 .concluidos span{
     color: red;
 }
+@media (max-width: 600px) {
+    .concluidos{
+        width: 75%;
+    }
+}

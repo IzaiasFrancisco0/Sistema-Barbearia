@@ -1,7 +1,7 @@
 import './Agendar.css'
 import {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
-import Sidebar from './Sidebar'; 
+import Sidebar from '../sidebar/Sidebar'; 
 
 export default function Agendar(){
     const [idCliente, setIdCliente] = useState(0);
@@ -68,14 +68,13 @@ export default function Agendar(){
                   <div className="tabela"> 
                   <label>ID Cliente</label>
                   <input type="number" onChange={(e) => setIdCliente(e.target.value)}/>
-                  <label>Cliente</label>
+                  <label>Nome</label>
                   <input type="text" onChange={(e) => setCliente(e.target.value)}/>
                   <label>Serviço</label>
                   <select value={inputServico} onChange={(e) => setServico(e.target.value)}>
-                    <option value="Escolha um serviço"></option>
-                   <option value="barba">Barba</option>
-                   <option value="cabelo">Cabelo</option>
-                   <option value="sobrancelha">Sobrancelha</option>
+                   <option value="Barba">Barba</option>
+                   <option value="Cabelo">Cabelo</option>
+                   <option value="Sobrancelha">Sobrancelha</option>
                   </select>
                 <label>Escolha um horário</label>
                 <input type="time" onChange={(e) => setInputTime(e.target.value)}></input>
@@ -97,9 +96,9 @@ export default function Agendar(){
                 <thead>
                     <tr>
                         <th>ID Cliente</th>
-                        <th>Cliente</th>
+                        <th>Nome</th>
                         <th>Data</th>
-                        <th>Hora</th>
+                        <th>Horário</th>
                         <th>Serviço</th>
                         <th>Observação</th>
                     </tr>

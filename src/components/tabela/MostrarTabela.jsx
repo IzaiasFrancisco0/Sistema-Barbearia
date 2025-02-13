@@ -2,8 +2,8 @@ import './MostrarTabela.css';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import Concluidos from './Concluidos';
-import Sidebar from './Sidebar'; 
+import Concluidos from '../concluidos/Concluidos';
+import Sidebar from '../sidebar/Sidebar'; 
 
 export default function MostrarTabela() {
   const [arrayVazio, setArrayVazio] = useState([]);
@@ -33,7 +33,7 @@ export default function MostrarTabela() {
     <div className="mostrar-tabela">
         <Sidebar />
       <h2>Total de Agendamentos</h2>
-      <Concluidos totalConcluidos={totalConcluidos} /> {/* Passa o total como prop */}
+      <Concluidos totalConcluidos={totalConcluidos} /> 
       <div className="table-container2">
         <table>
           <thead>
@@ -55,37 +55,37 @@ export default function MostrarTabela() {
                   textDecoration: agendamento.concluido ? 'line-through' : 'none',
                   color: agendamento.concluido ? 'red' : 'white'
                 }}>
-                  {agendamento.idCliente} {/* ID Cliente */}
+                  {agendamento.idCliente} 
                 </td>
                 <td style={{
                   textDecoration: agendamento.concluido ? 'line-through' : 'none',
                   color: agendamento.concluido ? 'red' : 'white'
                 }}>
-                  {agendamento.cliente} {/* Número */}
+                  {agendamento.cliente} 
                 </td>
                 <td style={{
                   textDecoration: agendamento.concluido ? 'line-through' : 'none',
                   color: agendamento.concluido ? 'red' : 'white'
                 }}>
-                  {agendamento.data} {/* Data */}
+                  {agendamento.data} 
                 </td>
                 <td style={{
                   textDecoration: agendamento.concluido ? 'line-through' : 'none',
                   color: agendamento.concluido ? 'red' : 'white'
                 }}>
-                  {agendamento.hora} {/* Hora */}
+                  {agendamento.hora} 
                 </td>
                 <td style={{
                   textDecoration: agendamento.concluido ? 'line-through' : 'none',
                   color: agendamento.concluido ? 'red' : 'white'
                 }}>
-                  {agendamento.servico} {/* Serviço */}
+                  {agendamento.servico} 
                 </td>
                 <td style={{
                   textDecoration: agendamento.concluido ? 'line-through' : 'none',
                   color: agendamento.concluido ? 'red' : 'white'
                 }}>
-                  {agendamento.observacao} {/* Cliente */}
+                  {agendamento.observacao} 
                 </td>
                 <td className="concluido" onClick={() => concluirTarefa(index)}>✔</td>
                 <td className="icone-excluir" onClick={() => excluirItem(index)}>

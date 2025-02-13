@@ -5,9 +5,9 @@ import './index.css'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Agendar from './components/Agendar.jsx';
-import MostrarTabela from './components/MostrarTabela.jsx';
-import Concluidos from './components/Concluidos.jsx';
+import Agendar from './components/agendar/Agendar.jsx';
+import MostrarTabela from './components/tabela/MostrarTabela.jsx';
+import Concluidos from './components/concluidos/Concluidos.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

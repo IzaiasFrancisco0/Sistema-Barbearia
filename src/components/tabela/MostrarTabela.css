@@ -35,3 +35,12 @@
     color: green;
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+ .mostrar-tabela{
+    margin-left: 5%;
+ }
+ .mostrar-tabela h2{
+    text-align: start;
+ }
+}

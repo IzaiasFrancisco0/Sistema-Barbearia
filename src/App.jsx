@@ -1,14 +1,11 @@
-
 import './App.css';
-import Formulario from './components/Formulario';
-
+import Agendar from './components/agendar/Agendar'
 
 function App() {
 
   return (
    <div className="container">
-    <Formulario />
-  
+    <Agendar />
    </div>
   )
 }

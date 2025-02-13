@@ -1,0 +1,287 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.agendar {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#1b1b1c, #141414, #1e1e1f);
+}
+
+.container-agenda {
+  width: 80%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.tabela-agendamento,
+.observacao {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.tabela-agendamento {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+}
+
+.tabela-agendamento input,
+.tabela-agendamento select {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  margin-bottom: 15px;
+  margin-top: 4px;
+}
+
+.tabela-agendamento input:focus{
+  outline: none;
+}
+
+.tabela-agendamento label {
+  color: white;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+
+.tabela select{
+  background-color: #1b1b1c;
+}
+
+.tabela-agendamento button {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.5s ease-in-out;
+  font-weight: bold;
+}
+
+.tabela-agendamento button:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+.observacao textarea {
+  width: 300px;
+  height: 250px;
+  resize: none;
+  overflow-y: auto;
+  background-color: transparent;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: "Roboto", serif;
+  color: white;
+  margin-left: 20%;
+  margin-top: 4px;
+}
+
+.observacao textarea:focus{
+  outline: none;
+}
+
+.observacao label {
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  padding-left: 50%;
+}
+
+.horarios-agendados {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.horarios-agendados h3 {
+  margin-top: 50px;
+  color: white;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.table-container {
+  max-height: 300px; 
+  overflow-y: auto; 
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+thead th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  padding: 8px;
+  text-align: left;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #444444;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #494949;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+@media (max-width: 600px) {
+  .agendar {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabela-agendamento {
+    width: 100%;
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .observacao {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .observacao label{
+    padding-left: 30%;
+  }
+
+  .tabela-agendamento button {
+    width: 100%;
+    margin-top: 20px; 
+  }
+
+  .observacao textarea {
+    width: 100%;
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  .table-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  table {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  td {
+    font-size: 14px;
+    display: table-cell;
+    width: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr {
+    display: table-row;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .agendar {
+    padding: 10px;
+  }
+
+  .tabela-agendamento,
+  .observacao {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .table-container {
+    width: 100%;
+  }
+
+  table {
+    font-size: 16px;
+  }
+
+  td {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .agendar {
+    flex-direction: row;
+  }
+
+  .tabela-agendamento {
+    width: 45%;
+  }
+
+  .observacao {
+    width: 45%;
+  }
+
+  .table-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  table {
+    font-size: 18px;
+  }
+
+  td {
+    font-size: 18px;
+  }
+}
