@@ -1,4 +1,3 @@
-import React from 'react';
 import './Concluidos.css';
 
 export default function Concluidos({ totalConcluidos }) {

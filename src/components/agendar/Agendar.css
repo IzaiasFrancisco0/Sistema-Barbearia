@@ -8,7 +8,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background: linear-gradient(#1b1b1c, #141414, #1e1e1f);
 }
 
@@ -49,7 +49,7 @@ body {
   margin-top: 4px;
 }
 
-.tabela-agendamento input:focus{
+.tabela-agendamento input:focus {
   outline: none;
 }
 
@@ -60,7 +60,7 @@ body {
   font-weight: 600;
 }
 
-.tabela select{
+.tabela select {
   background-color: #1b1b1c;
 }
 
@@ -93,7 +93,7 @@ body {
   margin-top: 4px;
 }
 
-.observacao textarea:focus{
+.observacao textarea:focus {
   outline: none;
 }
 
@@ -121,8 +121,8 @@ body {
 }
 
 .table-container {
-  max-height: 300px; 
-  overflow-y: auto; 
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 table {
@@ -192,13 +192,14 @@ tbody tr:nth-child(even) {
     margin-left: 0;
     margin-top: 30px;
   }
-  .observacao label{
+
+  .observacao label {
     padding-left: 30%;
   }
 
   .tabela-agendamento button {
     width: 100%;
-    margin-top: 20px; 
+    margin-top: 20px;
   }
 
   .observacao textarea {

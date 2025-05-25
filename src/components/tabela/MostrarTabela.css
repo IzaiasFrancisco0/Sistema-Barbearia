@@ -1,4 +1,4 @@
-.mostrar-tabela{
+.mostrar-tabela {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,12 +6,14 @@
     height: 100vh;
     width: 100%;
 }
-.mostrar-tabela h2{
+
+.mostrar-tabela h2 {
     text-align: center;
     color: white;
-   padding-top: 50px;
+    padding-top: 50px;
 }
-.table-container2{
+
+.table-container2 {
     width: 80%;
     max-height: 90vh;
     overflow-y: auto;
@@ -19,28 +21,31 @@
     margin-bottom: 1rem;
 }
 
-.table-container2 table td{
+.table-container2 table td {
     padding: 20px;
     font-size: 18px;
-   color: white;
+    color: white;
 }
 
-.table-container2 .icone-excluir{
+.table-container2 .icone-excluir {
     cursor: pointer;
 }
-.icone-excluir:hover{
+
+.icone-excluir:hover {
     color: red;
 }
-.concluido:hover{
+
+.concluido:hover {
     color: green;
     cursor: pointer;
 }
 
 @media (max-width: 600px) {
- .mostrar-tabela{
-    margin-left: 5%;
- }
- .mostrar-tabela h2{
-    text-align: start;
- }
+    .mostrar-tabela {
+        margin-left: 5%;
+    }
+
+    .mostrar-tabela h2 {
+        text-align: start;
+    }
 }

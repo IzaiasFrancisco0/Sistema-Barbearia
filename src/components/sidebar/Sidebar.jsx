@@ -16,9 +16,6 @@ const Sidebar = () => {
                 <li onClick={() => navigate('/MostrarTabela')}>
                     <span><FontAwesomeIcon icon={faCalendarDays} /></span> Ver Horários Agendados
                 </li>
-                <li onClick={() => alert("Em construção..")}>
-                    <span><FontAwesomeIcon icon={faBell} /></span> Total de Horários Concluídos
-                </li>
             </ul>
         </div>
     );
