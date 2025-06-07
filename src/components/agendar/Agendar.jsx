@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import Sidebar from '../sidebar/Sidebar';
 
 export default function Agendar() {
-  const [idCliente, setIdCliente] = useState('');
   const [inputCliente, setCliente] = useState('');
   const [inputServico, setServico] = useState('');
   const [inputTime, setInputTime] = useState('');
@@ -14,7 +13,6 @@ export default function Agendar() {
 
   const navigate = useNavigate();
 
-  const iDCliente = idCliente.trim() !== '';
   const data = inputDate.trim() !== '';
   const hora = inputTime.trim() !== '';
   const cliente = inputCliente.trim() !== '';
@@ -27,14 +25,13 @@ export default function Agendar() {
   }, []);
 
   function validarDados() {
-    if (!iDCliente || !data || !hora || !cliente || !servico || !obs) {
+    if (!data || !hora || !cliente || !servico || !obs) {
       alert("Tem algum campo vazio!!");
       return;
     }
 
     const agendamentoExistente = arrayVazio.find(
       (agend) =>
-        agend.idCliente === idCliente &&
         agend.cliente.toLowerCase() === inputCliente.toLowerCase()
     );
 
@@ -44,7 +41,6 @@ export default function Agendar() {
     }
 
     const novoAgendamento = {
-      idCliente,
       cliente: inputCliente,
       servico: inputServico,
       hora: inputTime,
@@ -65,8 +61,6 @@ export default function Agendar() {
       <div className="container-agenda">
         <div className="tabela-agendamento">
           <div className="tabela">
-            <label>ID Cliente</label>
-            <input type="number" value={idCliente} onChange={(e) => setIdCliente(e.target.value)} />
             <label>Nome</label>
             <input type="text" value={inputCliente} onChange={(e) => setCliente(e.target.value)} />
             <label>Serviço</label>
@@ -88,12 +82,11 @@ export default function Agendar() {
           </div>
         </div>
         <div className="horarios-agendados">
-          <h3>Horários agendados</h3>
+          <h3>Horários Agendados</h3>
           <div className="table-container">
             <table>
               <thead>
                 <tr>
-                  <th>ID Cliente</th>
                   <th>Nome</th>
                   <th>Data</th>
                   <th>Horário</th>
@@ -104,7 +97,6 @@ export default function Agendar() {
               <tbody>
                 {arrayVazio.map((agendamento, index) => (
                   <tr key={index}>
-                    <td>{agendamento.idCliente}</td>
                     <td>{agendamento.cliente}</td>
                     <td>{agendamento.data}</td>
                     <td>{agendamento.hora}</td>

@@ -38,7 +38,6 @@ export default function MostrarTabela() {
         <table>
           <thead>
             <tr>
-              <th>ID Cliente</th>
               <th>Cliente</th>
               <th>Data</th>
               <th>Hora</th>
@@ -51,12 +50,6 @@ export default function MostrarTabela() {
           <tbody>
             {arrayVazio.map((agendamento, index) => (
               <tr key={index}>
-                <td style={{
-                  textDecoration: agendamento.concluido ? 'line-through' : 'none',
-                  color: agendamento.concluido ? 'red' : 'white'
-                }}>
-                  {agendamento.idCliente} 
-                </td>
                 <td style={{
                   textDecoration: agendamento.concluido ? 'line-through' : 'none',
                   color: agendamento.concluido ? 'red' : 'white'
